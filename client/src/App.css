@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}  
+
+.nav-bar {
+  padding: 30px;
+  background-color: lightpink;
+}
+.nav-bar * {
+  padding: 30px;
+}
