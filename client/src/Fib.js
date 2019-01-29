@@ -49,7 +49,6 @@ class Fib extends React.Component {
   render() {
     return (
       <div>
-        <p>Hello world</p>
         <form onSubmit={this.handleSubmit}>
           <label>Enter your index:</label>
           <input
