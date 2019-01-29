@@ -31,11 +31,13 @@ class Fib extends React.Component {
     await axios.post('/api/values', {
       index: this.state.index
     });
+    this.fetchValues();
+    this.fetchIndexes();
     this.setState({ index: '' });
   }
 
   renderSeenIndexes() {
-    return this.state.seenIndexes.map(({ number }) => number.join(', '))
+    return this.state.seenIndexes.map(({ number }) => `${number}, `)
   }
 
   renderCalculatedValues() {
@@ -48,7 +50,7 @@ class Fib extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ padding: 30 }}>
         <form onSubmit={this.handleSubmit}>
           <label>Enter your index:</label>
           <input
