@@ -9,10 +9,10 @@ script:
   - docker run andreicalazans/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t andreicalazans/multi-client -f ./client
-  - docker build -t andreicalazans/multi-nginx -f ./nginx
-  - docker build -t andreicalazans/multi-server -f ./server
-  - docker build -t andreicalazans/multi-worker -f ./worker
+  - docker build -t andreicalazans/multi-client ./client
+  - docker build -t andreicalazans/multi-nginx ./nginx
+  - docker build -t andreicalazans/multi-server ./server
+  - docker build -t andreicalazans/multi-worker ./worker
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
