@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t andreicalazans/multi-client -f ./client
-  - docker build -t andreicalazans/multi-nginx -f ./neinx
+  - docker build -t andreicalazans/multi-nginx -f ./nginx
   - docker build -t andreicalazans/multi-server -f ./server
   - docker build -t andreicalazans/multi-worker -f ./worker
 
